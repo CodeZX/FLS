@@ -24,9 +24,14 @@
     self.title  = @"帮助";
 //    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancel:)];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"返回" style:UIBarButtonItemStyleDone target:self action:@selector(cancel:)];
+    
+    self.navigationController.navigationBar.tintColor = [UIColor blackColor];
    
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar setShadowImage:[UIImage new]];
+    
+    
 
-    UINavigationBar *bar = [[UINavigationBar alloc]init];
 }
 
 - (void)cancel:(UIButton *)btn {
