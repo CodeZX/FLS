@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C01F47520F30D6E0082F7D6 /* FLSHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C01F47320F30D6E0082F7D6 /* FLSHelpViewController.m */; };
+		3C01F47620F30D6E0082F7D6 /* FLSHelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C01F47420F30D6E0082F7D6 /* FLSHelpViewController.xib */; };
+		3C01F47820F33A5B0082F7D6 /* 411531118216_.pic_hd.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3C01F47720F33A5B0082F7D6 /* 411531118216_.pic_hd.jpg */; };
 		3CCC595F20E9D73F00AB3B28 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC595E20E9D73F00AB3B28 /* AppDelegate.m */; };
 		3CCC596820E9D74A00AB3B28 /* FLSHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CCC596320E9D74A00AB3B28 /* FLSHomeViewController.m */; };
 		3CCC597020E9D75100AB3B28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CCC596A20E9D75100AB3B28 /* LaunchScreen.storyboard */; };
@@ -53,6 +56,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C01F47220F30D6E0082F7D6 /* FLSHelpViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FLSHelpViewController.h; sourceTree = "<group>"; };
+		3C01F47320F30D6E0082F7D6 /* FLSHelpViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FLSHelpViewController.m; sourceTree = "<group>"; };
+		3C01F47420F30D6E0082F7D6 /* FLSHelpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FLSHelpViewController.xib; sourceTree = "<group>"; };
+		3C01F47720F33A5B0082F7D6 /* 411531118216_.pic_hd.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 411531118216_.pic_hd.jpg; sourceTree = "<group>"; };
 		3CCC594020E9BC7100AB3B28 /* FLS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FLS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CCC595D20E9D73F00AB3B28 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3CCC595E20E9D73F00AB3B28 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -195,6 +202,9 @@
 			children = (
 				3CCC596420E9D74A00AB3B28 /* FLSHomeViewController.h */,
 				3CCC596320E9D74A00AB3B28 /* FLSHomeViewController.m */,
+				3C01F47220F30D6E0082F7D6 /* FLSHelpViewController.h */,
+				3C01F47320F30D6E0082F7D6 /* FLSHelpViewController.m */,
+				3C01F47420F30D6E0082F7D6 /* FLSHelpViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -250,6 +260,7 @@
 				3CCC596E20E9D75100AB3B28 /* main.m */,
 				3CCC596F20E9D75100AB3B28 /* Info.plist */,
 				3CCC59CD20EDCD9500AB3B28 /* Media.xcassets */,
+				3C01F47720F33A5B0082F7D6 /* 411531118216_.pic_hd.jpg */,
 			);
 			name = Resource;
 			path = FLS/Resource;
@@ -410,9 +421,11 @@
 				3CCC599A20ECCC5900AB3B28 /* bg@3x.png in Resources */,
 				3CCC597320E9D75100AB3B28 /* Info.plist in Resources */,
 				3CCC59C320EDC5A500AB3B28 /* back@3x.png in Resources */,
+				3C01F47820F33A5B0082F7D6 /* 411531118216_.pic_hd.jpg in Resources */,
 				3CCC59CC20EDC5A500AB3B28 /* 进入应用.png in Resources */,
 				3CCC599020EC55F000AB3B28 /* FLSSignView.xib in Resources */,
 				3CCC59C920EDC5A500AB3B28 /* back.png in Resources */,
+				3C01F47620F30D6E0082F7D6 /* FLSHelpViewController.xib in Resources */,
 				3CCC59A220EDC18200AB3B28 /* search close.png in Resources */,
 				3CCC597E20EA21CE00AB3B28 /* 禄.gif in Resources */,
 				3CCC59C220EDC5A500AB3B28 /* back@2x.png in Resources */,
@@ -491,6 +504,7 @@
 				3CCC59A020EDA7F700AB3B28 /* CALayer+add.m in Sources */,
 				3CCC599520ECB92100AB3B28 /* signModel.m in Sources */,
 				3CCC59C820EDC5A500AB3B28 /* ATJURLFailture.m in Sources */,
+				3C01F47520F30D6E0082F7D6 /* FLSHelpViewController.m in Sources */,
 				3CCC59C520EDC5A500AB3B28 /* UIImage+Extension.m in Sources */,
 				3CCC59CA20EDC5A500AB3B28 /* SDLaunchWebViewController.m in Sources */,
 				3CCC596820E9D74A00AB3B28 /* FLSHomeViewController.m in Sources */,

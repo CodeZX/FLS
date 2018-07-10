@@ -75,7 +75,36 @@
         self.numberLabel7.text = model.lotteryNumber[6];
     }
     
-    self.week.text = [NSString stringWithFormat:@"星期%@", [self getweekDayWithDate:[NSDate date]]];
+    NSString  *weekString =  [self getweekDayWithDate:[NSDate date]];
+    switch ([weekString intValue]) {
+        case 1:
+             self.week.text = [NSString stringWithFormat:@"星期%@",@"日"];
+            break;
+        case 2:
+            self.week.text = [NSString stringWithFormat:@"星期%@",@"一"];
+            break;
+        case 3:
+            self.week.text = [NSString stringWithFormat:@"星期%@",@"二"];
+            break;
+        case 4:
+            self.week.text = [NSString stringWithFormat:@"星期%@",@"三"];
+            break;
+        case 5:
+            self.week.text = [NSString stringWithFormat:@"星期%@",@"四"];
+            break;
+        case 6:
+            self.week.text = [NSString stringWithFormat:@"星期%@",@"五"];
+            break;
+        case 7:
+            self.week.text = [NSString stringWithFormat:@"星期%@",@"六"];
+            break;
+       
+        default:
+            break;
+    }
+   
+    
+//    NSLog(@"weakSring%@",weekString);
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
     formatter.dateFormat = @"dd";

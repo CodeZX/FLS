@@ -255,9 +255,9 @@
                     </userDefinedRuntimeAttributes>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="五月二十" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P8i-a5-Vtj">
-                    <rect key="frame" x="131.5" y="49" width="90" height="21"/>
+                    <rect key="frame" x="106.5" y="49" width="140" height="21"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="90" id="EnD-5L-ZKq"/>
+                        <constraint firstAttribute="width" constant="140" id="EnD-5L-ZKq"/>
                         <constraint firstAttribute="height" constant="21" id="y3H-lC-gQi"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>

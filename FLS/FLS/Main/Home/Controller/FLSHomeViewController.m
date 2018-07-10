@@ -17,6 +17,11 @@
 #import <MJExtension/MJExtension.h>
 #import "signModel.h"
 #import "XTJWebNavigationViewController.h"
+#import "FLSHelpViewController.h"
+
+
+#define KISIphoneX (CGSizeEqualToSize(CGSizeMake(375.f, 812.f), [UIScreen mainScreen].bounds.size) || CGSizeEqualToSize(CGSizeMake(812.f, 375.f), [UIScreen mainScreen].bounds.size))
+
 
 @interface FLSHomeViewController ()<CLLocationManagerDelegate,CAAnimationDelegate,FLSSignViewDelegate>
 @property (nonatomic,strong) GPUImageView *filtrView;
@@ -28,6 +33,7 @@
 @property (nonatomic,weak) UILabel *directionLable;
 @property (nonatomic,weak) UILabel *angleLable;
 @property (nonatomic,weak) FLAnimatedImageView *imageView;
+@property (nonatomic,weak) UIButton *helpButton;
 
 @property (nonatomic,weak) UIImageView *vi;
 
@@ -52,7 +58,7 @@
     
     self.sign = NO;
     // 创建NSTimer对象
-    self.timer = [NSTimer timerWithTimeInterval:15 target:self selector:@selector(timerAction) userInfo:nil repeats:YES];
+    self.timer = [NSTimer timerWithTimeInterval:5 target:self selector:@selector(timerAction) userInfo:nil repeats:YES];
 //    [self.timer setFireDate:[NSDate distantFuture]];
     // 加入RunLoop中
     [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSDefaultRunLoopMode];
@@ -86,7 +92,13 @@
     CGFloat directionH = 44;
     CGFloat directionX = directionCenterX - directionW/2;
     CGFloat directionY = directionCenterY - directionH/2;
-    UILabel *directionLable = [[UILabel alloc]initWithFrame:CGRectMake(directionX, 20, directionW, directionH)];
+    UILabel *directionLable;
+    if(KISIphoneX) {
+        directionLable = [[UILabel alloc]initWithFrame:CGRectMake(directionX, 45, directionW, directionH)];
+    }else {
+         directionLable = [[UILabel alloc]initWithFrame:CGRectMake(directionX, 20, directionW, directionH)];
+    }
+   
     directionLable.textColor = [UIColor whiteColor];
     directionLable.font = [UIFont systemFontOfSize:40];
     directionLable.text = @"定位中";
@@ -100,8 +112,8 @@
     CGFloat angleW = 200;
     CGFloat angleH = 44;
     CGFloat angleX = directionCenterX - directionW/2;
-    CGFloat angleY = directionCenterY - directionH/2;
-    UILabel *angleLable = [[UILabel alloc]initWithFrame:CGRectMake(angleX, 64, angleW, angleH)];
+    CGFloat angleY = CGRectGetMaxY(directionLable.frame) + 5;
+    UILabel *angleLable = [[UILabel alloc]initWithFrame:CGRectMake(angleX, angleY, angleW, angleH)];
     angleLable.textColor = [UIColor whiteColor];
 //    angleLable.backgroundColor = [UIColor yellowColor];
     angleLable.font = [UIFont systemFontOfSize:20];
@@ -109,6 +121,20 @@
     angleLable.text = @"00.00";
     [self.view addSubview:angleLable];
     self.angleLable = angleLable;
+    
+    
+    CGFloat helpCenterX = self.view.frame.size.width/2;
+    CGFloat helpCenterY = self.view.frame.size.height/2;
+    CGFloat helpW = 80;
+    CGFloat helpH = 44;
+    CGFloat helpX = self.view.frame.size.width - helpW - 50;
+    CGFloat helpY = CGRectGetMinY(directionLable.frame);
+    UIButton *helpButton = [[UIButton alloc]initWithFrame:CGRectMake(helpX, helpY, angleW, angleH)];
+//    helpButton.font = [UIFont systemFontOfSize:20];
+    [helpButton setTitle:@"帮助" forState:UIControlStateNormal];
+    [helpButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [self.view addSubview:helpButton];
+    [helpButton addTarget:self action:@selector(helpButton:) forControlEvents:UIControlEventTouchUpInside];
     
     
     CGFloat centerX = self.view.frame.size.width/2;
@@ -125,7 +151,15 @@
     self.imageView.animatedImage = [FLAnimatedImage animatedImageWithGIFData:imageData];
     self.imageView.hidden = YES;
    
+   
+
+}
+
+- (void)helpButton:(UIButton *)btn {
     
+    FLSHelpViewController *helpVC = [[FLSHelpViewController alloc]init];
+    UINavigationController *navVC = [[UINavigationController alloc]initWithRootViewController:helpVC];
+    [self presentViewController:navVC animated:YES completion:nil];
 }
 
 
@@ -346,7 +380,7 @@
    [self.locationManager startUpdatingHeading];
     self.imageView.hidden = YES;
     self.sign = NO;
-    NSDate *date = [NSDate dateWithTimeIntervalSinceNow:15];
+    NSDate *date = [NSDate dateWithTimeIntervalSinceNow:5];
     [self.timer setFireDate:date];
     
     
