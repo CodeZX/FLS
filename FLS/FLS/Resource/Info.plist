@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>风水财神</string>
+	<string>风水财神好彩票</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -19,7 +19,7 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>5</string>
+	<string>6</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -28,11 +28,11 @@
 		<true/>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>获取相机权限，寻找福禄寿</string>
+	<string>允许“风水财神”获取相机权限，拍摄周围场景</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>获取相册权限，储存图片</string>
+	<string>允许“风水财神”获取相册权限，储存图片</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>获取相册权限，储存照片</string>
+	<string>允许“风水财神”获取相册权限，储存照片</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>fetch</string>

@@ -380,7 +380,7 @@
    [self.locationManager startUpdatingHeading];
     self.imageView.hidden = YES;
     self.sign = NO;
-    NSDate *date = [NSDate dateWithTimeIntervalSinceNow:5];
+    NSDate *date = [NSDate dateWithTimeIntervalSinceNow:8];
     [self.timer setFireDate:date];
     
     
